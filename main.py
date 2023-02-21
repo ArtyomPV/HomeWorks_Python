@@ -48,19 +48,39 @@
 # 385916 -> yes
 # 123456 -> no
 
-bilet_Number = int(input("Введите номер билета: \n"))
-num1 = bilet_Number//1000
-num2 = bilet_Number%1000
-sum1, sum2 = 0, 0
+# bilet_Number = int(input("Введите номер билета: \n"))
+# num1 = bilet_Number//1000
+# num2 = bilet_Number%1000
+# sum1, sum2 = 0, 0
 
-while num1 != 0 and num2 != 0:
-    sum1 += num1 % 10
-    num1 //= 10
-    sum2 += num2 % 10
-    num2 //= 10
+# while num1 != 0 and num2 != 0:
+#     sum1 += num1 % 10
+#     num1 //= 10
+#     sum2 += num2 % 10
+#     num2 //= 10
 
-if sum != sum:
-    print("no")
+# if sum != sum:
+#     print("no")
+# else:
+#     print("yes")
+
+# ==================================================================
+# Задача 8: Требуется определить, можно ли от шоколадки размером n × m
+# долек отломить k долек, если разрешается сделать один разлом по прямой
+# между дольками (то есть разломить шоколадку на два прямоугольника).
+#
+# *Пример:*
+#
+# 3 2 4 -> yes
+# 3 2 1 -> no
+
+length = int(input('введите количество рядов: \n'))
+width = int(input('введите количество колонок: \n'))
+amount = int(input('введите частей шоколадки: \n'))
+# print((length*width)%amount)
+
+if amount % length == 0 or amount % width == 0:
+    print('Yes')
 else:
-    print("yes")
+    print('No')
 
